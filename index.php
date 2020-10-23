@@ -2,7 +2,6 @@
 
     header('Access-Control-Allow-Origin: *');
     
-    echo $_GET['callback'] . '(' . json_encode($output) . ');';
 
 ?>
 <!DOCTYPE html>
