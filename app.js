@@ -6,7 +6,7 @@
 
 
 var apiPeer = $.ajax({
-    url : 'https://api-peer.herokuapp.com/api/api_peer_infos', // La ressource ciblée
+    url : 'https://api-peer-good.herokuapp.com/api/api_peer_infos', // La ressource ciblée
     type : 'GET',
     dataType : "json",
     async: false, // Mode synchrone,
@@ -19,7 +19,7 @@ console.log(apiPeer);
 
 function findUserBresponse(nameConversation){
     return $.ajax({
-        url : 'https://api-peer.herokuapp.com/api/find-user-b-response', // La ressource ciblée
+        url : 'https://api-peer-good.herokuapp.com/api/find-user-b-response', // La ressource ciblée
         type : 'post',
         dataType : "json",
         async: false, // Mode synchrone,
@@ -40,7 +40,7 @@ function bindEvents(p,initiator,nameConversation) {
     p.on('signal', function (data) {
         if(initiator) {
             $.ajax({
-                url : 'https://api-peer.herokuapp.com/api/set-user-a', // La ressource ciblée
+                url : 'https://api-peer-good.herokuapp.com/api/set-user-a', // La ressource ciblée
                 type : 'post',
                 dataType : "json",
                 async: false, // Mode synchrone,
@@ -54,7 +54,7 @@ function bindEvents(p,initiator,nameConversation) {
             })
         } else {
             $.ajax({
-                url : 'https://api-peer.herokuapp.com/api/set-user-b', // La ressource ciblée
+                url : 'https://api-peer-good.herokuapp.com/api/set-user-b', // La ressource ciblée
                 type : 'post',
                 dataType : "json",
                 async: false, // Mode synchrone,
@@ -82,7 +82,7 @@ function bindEvents(p,initiator,nameConversation) {
 
     if(!initiator){
         let userA = $.ajax({
-            url : 'https://api-peer.herokuapp.com/api/get-user-a', // La ressource ciblée
+            url : 'https://api-peer-good.herokuapp.com/api/get-user-a', // La ressource ciblée
             type : 'post',
             dataType : "json",
             async: false, // Mode synchrone,
@@ -102,7 +102,7 @@ function bindEvents(p,initiator,nameConversation) {
 
         setTimeout(function(){
             $.ajax({
-                url : 'https://api-peer.herokuapp.com/api/set-answer', // La ressource ciblée
+                url : 'https://api-peer-good.herokuapp.com/api/set-answer', // La ressource ciblée
                 type : 'post',
                 dataType : "json",
                 async: false, // Mode synchrone,
@@ -125,7 +125,7 @@ function bindEvents(p,initiator,nameConversation) {
             if(!flag){
                 if(findUserBresponse(nameConversation) != false){
                     let answer = $.ajax({
-                        url : 'https://api-peer.herokuapp.com/api/get-user-b', // La ressource ciblée
+                        url : 'https://api-peer-good.herokuapp.com/api/get-user-b', // La ressource ciblée
                         type : 'post',
                         dataType : "json",
                         async: false, // Mode synchrone,
