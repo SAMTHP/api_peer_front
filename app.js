@@ -138,8 +138,10 @@ function bindEvents(p,initiator,nameConversation) {
                     }).responseJSON
     
                     console.log(answer)
-                    
-                    document.querySelector('#text-area').value = JSON.stringify(answer);
+
+                    if(answer.length > 15) {
+                        document.querySelector('#text-area').value = JSON.stringify(answer);
+                    }
                     
                     p.signal(JSON.parse(document.querySelector('#text-area').value))
                     flag = true;
