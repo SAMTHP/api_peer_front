@@ -139,7 +139,7 @@ function bindEvents(p,initiator,nameConversation) {
     
                     console.log(answer)
 
-                    if(JSON.stringify(answer).length > 15) {
+                    if(JSON.stringify(answer) != undefined) {
                         document.querySelector('#text-area').value = JSON.stringify(answer);
                     }
                     
