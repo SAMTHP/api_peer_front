@@ -2,6 +2,7 @@
 
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json");
+    echo $_GET['callback'] . '(' . json_encode($output) . ');';
 
 ?>
 <!DOCTYPE html>
