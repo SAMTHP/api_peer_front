@@ -1,6 +1,6 @@
 <?php 
 
-    header('Access-Control-Allow-Origin: https://api-peer-good.herokuapp.com/api/*');
+    header('Access-Control-Allow-Origin: https://api-peer-good.herokuapp.com');
     
 
 ?>
