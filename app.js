@@ -21,6 +21,7 @@ function findUserBresponse(nameConversation){
     return $.ajax({
         url : 'https://api-peer-good.herokuapp.com/api/find-user-b-response', // La ressource ciblée
         type : 'post',
+        crossDomain: true,
         dataType : "jsonp",
         async: false, // Mode synchrone,
         data: JSON.stringify({
@@ -42,6 +43,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-user-a', // La ressource ciblée
                 type : 'post',
+        crossDomain: true,
                 dataType : "jsonp",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
@@ -56,6 +58,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-user-b', // La ressource ciblée
                 type : 'post',
+        crossDomain: true,
                 dataType : "jsonp",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
@@ -84,6 +87,7 @@ function bindEvents(p,initiator,nameConversation) {
         let userA = $.ajax({
             url : 'https://api-peer-good.herokuapp.com/api/get-user-a', // La ressource ciblée
             type : 'post',
+        crossDomain: true,
             dataType : "jsonp",
             async: false, // Mode synchrone,
             data: JSON.stringify({
@@ -104,6 +108,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-answer', // La ressource ciblée
                 type : 'post',
+        crossDomain: true,
                 dataType : "jsonp",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
@@ -127,6 +132,7 @@ function bindEvents(p,initiator,nameConversation) {
                     let answer = $.ajax({
                         url : 'https://api-peer-good.herokuapp.com/api/get-user-b', // La ressource ciblée
                         type : 'post',
+        crossDomain: true,
                         dataType : "jsonp",
                         async: false, // Mode synchrone,
                         data: JSON.stringify({

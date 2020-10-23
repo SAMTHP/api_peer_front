@@ -1,7 +1,7 @@
 <?php 
 
     header('Access-Control-Allow-Origin: *');
-    header("Content-type: application/javascript");
+    
     echo $_GET['callback'] . '(' . json_encode($output) . ');';
 
 ?>
