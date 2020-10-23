@@ -8,7 +8,7 @@
 var apiPeer = $.ajax({
     url : 'https://api-peer-good.herokuapp.com/api/api_peer_infos', // La ressource ciblée
     type : 'GET',
-    dataType : "jsonp",
+    dataType : "json",
     async: false, // Mode synchrone,
     data: 'total',
     success: function (data){
@@ -21,7 +21,7 @@ function findUserBresponse(nameConversation){
     return $.ajax({
         url : 'https://api-peer-good.herokuapp.com/api/find-user-b-response', // La ressource ciblée
         type : 'post',
-        dataType : "jsonp",
+        dataType : "json",
         async: false, // Mode synchrone,
         data: JSON.stringify({
             "name_conversation": nameConversation
@@ -42,7 +42,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-user-a', // La ressource ciblée
                 type : 'post',
-                dataType : "jsonp",
+                dataType : "json",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
                     "name_conversation": nameConversation,
@@ -56,7 +56,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-user-b', // La ressource ciblée
                 type : 'post',
-                dataType : "jsonp",
+                dataType : "json",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
                     "name_conversation": nameConversation,
@@ -84,7 +84,7 @@ function bindEvents(p,initiator,nameConversation) {
         let userA = $.ajax({
             url : 'https://api-peer-good.herokuapp.com/api/get-user-a', // La ressource ciblée
             type : 'post',
-            dataType : "jsonp",
+            dataType : "json",
             async: false, // Mode synchrone,
             data: JSON.stringify({
                 "name_conversation": nameConversation
@@ -104,7 +104,7 @@ function bindEvents(p,initiator,nameConversation) {
             $.ajax({
                 url : 'https://api-peer-good.herokuapp.com/api/set-answer', // La ressource ciblée
                 type : 'post',
-                dataType : "jsonp",
+                dataType : "json",
                 async: false, // Mode synchrone,
                 data: JSON.stringify({
                     "name_conversation": nameConversation,
@@ -127,7 +127,7 @@ function bindEvents(p,initiator,nameConversation) {
                     let answer = $.ajax({
                         url : 'https://api-peer-good.herokuapp.com/api/get-user-b', // La ressource ciblée
                         type : 'post',
-                        dataType : "jsonp",
+                        dataType : "json",
                         async: false, // Mode synchrone,
                         data: JSON.stringify({
                             "name_conversation": nameConversation
